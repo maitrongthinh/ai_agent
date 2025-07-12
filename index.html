@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trợ lý Học tập AI - FPT AI Hackathon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg>
+            <h1>Trợ lý Học tập AI</h1>
+        </div>
+        <div class="user-profile">
+            <span>Xin chào, Guest!</span>
+            <img src="https://i.pravatar.cc/40" alt="User Avatar">
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Cột bên trái: Khung chat của FPT AI Agent -->
+        <div class="chat-column card">
+            <div class="card-header">
+                <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg> Chat với Trợ lý AI</h3>
+            </div>
+            <div id="fptai-chat-container">
+                <script>
+                window.tovaAsyncInit = function() {
+                    tova.init({
+                    tenant_id: "01JYR1FT1P8567X68CCJPTJW0S",
+                    bot_code: "01JYVHTYZD6SKV2FCDHYB0NZ5P",
+                    ui_config: {
+                        position: "right",
+                        hide_greeting: false
+                    },
+                    extra: {}
+                    });
+                };
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https://agents.fpt.ai/connect/sdk.js";
+                    js.onload = window.tovaAsyncInit;
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, "script", "tova-jssdk"));
+                </script>
+                    
+            </div>
+        </div>
+
+        <!-- Cột bên phải: Kế hoạch và Báo cáo -->
+        <div class="data-column">
+            <div class="card">
+                <div class="card-header">
+                    <h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Kế hoạch học tập</h4>
+                </div>
+                <div id="study-plans-display" class="card-content">
+                    <!-- Khu vực này hoàn toàn trống, chờ JavaScript điền dữ liệu thật -->
+                </div>
+            </div>
+            
+            <div class="card">
+                 <div class="card-header">
+                    <h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M12 18v-6"></path><path d="m9 15 3-3 3 3"></path></svg> Dàn ý báo cáo</h4>
+                </div>
+                <div id="report-outlines-display" class="card-content">
+                    <!-- Khu vực này hoàn toàn trống, chờ JavaScript điền dữ liệu thật -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 FPT AI Hackathon. Giao diện được nâng cấp bởi Manus AI.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* --- BIẾN MÀU VÀ THIẾT LẬP CHUNG --- */
+:root {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #00aaff;
+    --primary-gradient: linear-gradient(90deg, #00aaff, #007bff);
+    --text-color: #e0e0e0;
+    --text-secondary-color: #a0a0a0;
+    --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+/* --- HEADER & FOOTER --- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo svg {
+    color: var(--primary-color);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: var(--text-secondary-color);
+    font-size: 0.9rem;
+}
+
+/* --- LAYOUT CHÍNH --- */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.chat-column {
+    flex: 3;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-column {
+    flex: 2;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* --- COMPONENT: CARD --- */
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-header h3, .card-header h4 {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.card-header svg {
+    color: var(--primary-color);
+    width: 20px;
+    height: 20px;
+}
+
+.card-content {
+    padding: 1.5rem;
+    color: var(--text-secondary-color);
+}
+
+/* --- KHU VỰC CHỨC NĂNG --- */
+#fptai-chat-container {
+    flex-grow: 1; /* Tự động lấp đầy không gian còn lại trong card */
+    height: 60vh;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: var(--text-secondary-color);
+}
+
+#study-plans-display, #report-outlines-display {
+    min-height: 180px;
+}
+
+/* --- THANH CUỘN (SCROLLBAR) --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--surface-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #007bff;
+}
